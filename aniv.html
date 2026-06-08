@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our 6th Anniversary</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #333;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(15px);
+            padding: 40px;
+            border-radius: 30px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.1);
+            text-align: center;
+            max-width: 550px;
+            z-index: 100;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            margin: 20px;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            font-size: 3rem;
+            color: #d6336c;
+            margin-bottom: 5px;
+        }
+
+        .timer-box {
+            display: flex;
+            justify-content: space-around;
+            background: white;
+            padding: 15px;
+            border-radius: 20px;
+            margin: 20px 0;
+            box-shadow: 0 10px 20px rgba(214, 51, 108, 0.1);
+        }
+
+        .time-section span {
+            display: block;
+            font-size: 1.8rem;
+            font-weight: 600;
+            color: #e64980;
+        }
+
+        .time-section label { font-size: 0.7rem; color: #888; text-transform: uppercase; }
+
+        p { font-size: 1rem; line-height: 1.6; color: #555; margin-bottom: 20px; }
+
+        /* Tombol Musik Estetik */
+        .music-btn {
+            background: #e64980;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(230, 73, 128, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .music-btn:hover {
+            background: #d6336c;
+            transform: scale(1.05);
+        }
+
+        /* Style untuk Elemen Berjatuhan */
+        .falling-element {
+            position: absolute;
+            top: -150px;
+            z-index: 1;
+            user-select: none;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        .falling-photo {
+            width: 100px;
+            height: 120px;
+            background: white;
+            padding: 10px 10px 22px 10px; /* Bingkai Polaroid */
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+            object-fit: cover;
+        }
+
+        .falling-heart {
+            color: #ff4d4d;
+            font-size: 3rem;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 2.3rem; }
+            .container { padding: 25px; }
+            .time-section span { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="bg-music" loop>
+        <source src="https://rr3---sn-npoe7nsr.googlevideo.com/videoplayback?expire=1780953635&ei=w90mapCnNtSIvdIP2cC8kQs&ip=41.212.83.44&id=o-AGVm1MD0sLJnnvQvr-wpNF1kIzJ8_d8unmM-Z3qvYXQw&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&cps=461&bui=ARmQxEX2TudYHZ6HQ8RLs7UT98EyrQOF7B_2cilmkv-VbCRBdnN8B-yHmbfSFGxKWLWys0DbsZlb_wBD&vprv=1&svpuc=1&mime=audio%2Fwebm&rqh=1&gir=yes&clen=3934085&dur=229.981&lmt=1750498381811293&keepalive=yes&fexp=51565116,51565681&c=ANDROID_VR&txp=4532534&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AHEqNM4wRAIgAnJ5p8fe3XTighVv8wUXLR6AtvO32WG_hXWbOBVlIK8CIDW5cqvetFxqaLCm4l8QdS_dTe8obMYN82hbaCB6IJkE&rm=sn-f5o5ojip-ocvs7l,sn-hc5r76&rrc=79,104&req_id=5e579f51ad94a3ee&cmsv=e&rms=rdu,au&redirect_counter=2&cms_redirect=yes&ipbypass=yes&met=1780932054,&mh=O8&mip=103.240.68.127&mm=29&mn=sn-npoe7nsr&ms=rdu&mt=1780931630&mv=m&mvi=3&pl=24&lsparams=cps,ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhALBc2L9DnFa2xoqqyW2QlRVB-37sHIUM2i2bfxwVE8UuAiAlGWhoJgt4oXOjM9pnNVxOhRFdKt2YIQTU0z9YfrjjGA%3D%3D" type="audio/mpeg">
+    </audio>
+
+    <div class="container">
+        <h1>Happy Anniversary!</h1>
+        <h1>6 Tahun</h1>
+        <p style="color: #e64980; font-weight: 600; margin-bottom: 5px;">9 Juni 2020</p>
+        <p>Terima kasih sudah menjadi bagian terbaik dalam hari-hariku. Enam tahun ini penuh dengan kenangan indah, dan aku tidak sabar untuk membuat lebih banyak lagi kenangan bersamamu di masa depan</p>
+        <div class="timer-box">
+            <div class="time-section"><span id="days">0</span><label>Hari</label></div>
+            <div class="time-section"><span id="hours">0</span><label>Jam</label></div>
+            <div class="time-section"><span id="minutes">0</span><label>Menit</label></div>
+            <div class="time-section"><span id="seconds">0</span><label>Detik</label></div>
+        </div>
+
+        <p>Enam tahun penuh warna, tawa, dan cerita. <br> Terima kasih sudah bertahan dan berjuang bersama hingga hari ini.</p>
+        
+        <button class="music-btn" id="music-control" onclick="toggleMusic()">
+            <span>🎵</span> Putar Musik Kenangan
+        </button>
+    </div>
+
+    <script>
+        // 1. DAFTAR LINK FOTO KALIAN (Ganti dengan link foto asli kalian)
+        const fotoKalian = [
+            "1.jpeg", 
+            "2.jpeg",
+            "3.jpeg",
+            "4.jpeg",
+            "5.jpeg",
+            "6.jpeg",
+            "7.jpeg",
+            "8.jpeg"
+        ];
+
+        // 2. LOGIKA KONTROL AUDIO
+        const music = document.getElementById("bg-music");
+        const musicBtn = document.getElementById("music-control");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                musicBtn.innerHTML = "<span>⏸</span> Pause Musik";
+                musicBtn.style.background = "#333"; // Berubah warna saat play
+            } else {
+                music.pause();
+                musicBtn.innerHTML = "<span>🎵</span> Putar Musik Kenangan";
+                musicBtn.style.background = "#e64980";
+            }
+        }
+
+        // 3. LOGIKA HITUNGAN WAKTU (9 Juni 2020)
+        const startDate = new Date("2020-06-09T00:00:00").getTime();
+        setInterval(() => {
+            const now = new Date().getTime();
+            const diff = now - startDate;
+            document.getElementById("days").innerText = Math.floor(diff / (1000 * 60 * 60 * 24));
+            document.getElementById("hours").innerText = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            document.getElementById("minutes").innerText = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+            document.getElementById("seconds").innerText = Math.floor((diff % (1000 * 60)) / 1000);
+        }, 1000);
+
+        // 4. LOGIKA ELEMEN JATUH (FOTO & HATI)
+        function createFallingElement() {
+            const container = document.createElement("div");
+            container.classList.add("falling-element");
+            
+            // Peluang 50% Foto, 50% Hati
+            if (Math.random() > 0.5) {
+                const img = document.createElement("img");
+                img.src = fotoKalian[Math.floor(Math.random() * fotoKalian.length)];
+                img.classList.add("falling-photo");
+                
+                // Rotasi acak untuk efek polaroid jatuh yang natural
+                const randomRotation = Math.random() * 40 - 20; // Antara -20deg sampai 20deg
+                img.style.transform = `rotate(${randomRotation}deg)`;
+                
+                container.appendChild(img);
+            } else {
+                const heart = document.createElement("span");
+                heart.innerHTML = "❤";
+                heart.classList.add("falling-heart");
+                container.appendChild(heart);
+            }
+
+            container.style.left = Math.random() * 100 + "vw";
+            container.style.animationDuration = Math.random() * 3 + 5 + "s"; // Kecepatan jatuh acak (5-8 detik)
+            container.style.fontSize = Math.random() * 1 + 1 + "rem";
+            
+            document.body.appendChild(container);
+            setTimeout(() => container.remove(), 8000);
+        }
+
+        setInterval(createFallingElement, 600); // Elemen baru muncul setiap 0.6 detik
+    </script>
+</body>
+</html>
